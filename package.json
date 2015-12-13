@@ -26,6 +26,8 @@
     "electron-prebuilt": "^0.35.0"
   },
   "dependencies": {
+    "electron-packager": "^5.1.1",
+    "electron-prebuilt": "^0.36.0",
     "menubar": "^3.0.0"
   }
 }
