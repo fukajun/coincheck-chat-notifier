@@ -9,10 +9,10 @@ const request = require('request');
 const mb = menubar();
 
 const switchIconUnread = ()=> {
-  mb.tray.setImage('./images/coin.png')
+  mb.tray.setImage(__dirname + '/images/coin.png')
 }
 const switchIconRead = ()=> {
-  mb.tray.setImage('./images/tick.png')
+  mb.tray.setImage(__dirname + '/images/tick.png')
 }
 mb.on('ready', function ready () {
 
