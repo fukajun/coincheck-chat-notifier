@@ -1,4 +1,5 @@
 node_modules
-/*.js
+/main.js
+/index.js
 .DS_Store
 /Coincheck*
