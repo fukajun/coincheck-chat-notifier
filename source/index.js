@@ -64,7 +64,7 @@ class App extends React.Component {
     return (
       <div>
         <div className='app_bar'>
-          <h1 className='app_bar-title'>- Message -</h1>
+          <h1 className='app_bar-title'>- coincheck chat -</h1>
           <a className='app_bar-quit_button' onClick={this.quit}>X</a>
           <span className='app_bar-time'>{this.state.updatedAt}</span>
         </div>
