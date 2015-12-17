@@ -22,7 +22,7 @@ class App extends React.Component {
         this.setState({body: list})
         recentlyId = recentlyMessage.id
 
-        this.notify('message', recentlyMessage.content);
+        this.notify(`message: ${recentlyMessage.name}`, recentlyMessage.content);
 
         setTimeout(()=> {
           ipcRenderer.send('mark_unread');
