@@ -3,7 +3,7 @@
 'use strict';
 
 import menubar from 'menubar';
-import { ipcMain } from 'electron';
+import { app, ipcMain } from 'electron';
 
 const request = require('request');
 const mb = menubar();
@@ -26,6 +26,10 @@ mb.on('ready', function ready () {
 
   ipcMain.on('mark_unread', (event, arg)=> {
     switchIconUnread();
+  });
+
+  ipcMain.on('quit', (event, arg)=> {
+    app.quit();
   });
 
   mb.on('show', ()=> {

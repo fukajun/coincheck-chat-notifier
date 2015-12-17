@@ -36,6 +36,10 @@ class App extends React.Component {
     }, 10000)
   }
 
+  quit() {
+    ipcRenderer.send('quit');
+  }
+
   notify(title, message) {
     Notification.requestPermission();
     var n = new Notification(title, { body: message });
@@ -61,6 +65,7 @@ class App extends React.Component {
       <div>
         <div className='app_bar'>
           <h1 className='app_bar-title'>- Message -</h1>
+          <a className='app_bar-quit_button' onClick={this.quit}>X</a>
           <span className='app_bar-time'>{this.state.updatedAt}</span>
         </div>
         <ol className='msg_list'>
