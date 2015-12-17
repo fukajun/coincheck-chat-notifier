@@ -1,7 +1,7 @@
 {
-  "name": "cc-chat-viewer",
+  "name": "coincheck-chat-notifier",
   "version": "1.0.0",
-  "description": "coincheck-chat viewer on menu bar",
+  "description": "Notify coincheck-chat message from menu bar",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atom/electron-quick-start.git"
+    "url": "git+https://github.com/fukajun/coincheck-chat-notifier"
   },
   "keywords": [
     "coincheck",
@@ -19,9 +19,9 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/fukajun/cc-chat-viewer/issues"
+    "url": "https://github.com/fukajun/coincheck-chat-notifier/issues"
   },
-  "homepage": "https://github.com/fukajun/cc-chat-viewer",
+  "homepage": "https://github.com/fukajun/coincheck-chat-notifier",
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
