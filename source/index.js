@@ -6,6 +6,8 @@ import ReactDom from 'react-dom';
 import { ipcRenderer } from 'electron';
 import moment from 'moment';
 
+const FETCH_INTERVAL = 10000
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -34,7 +36,7 @@ class App extends React.Component {
    ipcRenderer.send('asynchronous-message', 'ping');
     setInterval(()=> {
      ipcRenderer.send('asynchronous-message', 'ping');
-    }, 10000)
+    }, FETCH_INTERVAL)
   }
 
   quit() {
