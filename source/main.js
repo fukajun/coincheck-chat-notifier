@@ -6,13 +6,13 @@ import menubar from 'menubar';
 import { app, ipcMain } from 'electron';
 
 const request = require('request');
-const mb = menubar();
+const mb = menubar({ icon: __dirname + '/images/read.png' });
 
 const switchIconUnread = ()=> {
-  mb.tray.setImage(__dirname + '/images/coin.png')
+  mb.tray.setImage(__dirname + '/images/unread.png')
 }
 const switchIconRead = ()=> {
-  mb.tray.setImage(__dirname + '/images/tick.png')
+  mb.tray.setImage(__dirname + '/images/read.png')
 }
 mb.on('ready', function ready () {
 
