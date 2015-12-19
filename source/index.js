@@ -15,7 +15,7 @@ class App extends React.Component {
     this.state = { body: [], updatedAt: '' };
 
     let recentlyId = 0
-    ipcRenderer.on('asynchronous-reply', (event, arg)=> {
+    ipcRenderer.on('fetch_response', (event, arg)=> {
       let body = JSON.parse(arg)
       let list = body.chats.reverse()
       this.setState({ updatedAt: this.dateString() });
@@ -33,9 +33,9 @@ class App extends React.Component {
       }
     });
 
-   ipcRenderer.send('asynchronous-message', 'ping');
+   ipcRenderer.send('fetch_request');
     setInterval(()=> {
-     ipcRenderer.send('asynchronous-message', 'ping');
+     ipcRenderer.send('fetch_request');
     }, FETCH_INTERVAL)
   }
 

@@ -17,10 +17,10 @@ const switchIconRead = ()=> {
 }
 mb.on('ready', function ready () {
 
-  ipcMain.on('asynchronous-message', function(event, arg) {
+  ipcMain.on('fetch_request', function(event, arg) {
     request('https://coincheck.jp/chats/list', function (error, response, body) {
       if (!error && response.statusCode == 200) {
-        event.sender.send('asynchronous-reply', body);
+        event.sender.send('fetch_response', body);
       }
     })
   });
