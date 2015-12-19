@@ -54,6 +54,13 @@ body {
   padding: 5px;
   border-radius: 4px;
   background-color: #ddd;
+  height: 15px;
+}
+.msg_list-item-user {
+  float: left;
+}
+.msg_list-item-time {
+  float: right;
 }
 .msg_list-item_content {
   line-height: 25px;

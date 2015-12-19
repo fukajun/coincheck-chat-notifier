@@ -57,7 +57,10 @@ class App extends React.Component {
       let created_at = moment(msg.created_at).format('MM/DD HH:mm:ss');
       return (
         <li className='msg_list-item' key={msg.id}>
-          <div className='msg_list-item_title'>{created_at} <i className="flaticon-user43"> </i>{msg.name}</div>
+          <div className='msg_list-item_title'>
+            <div className='msg_list-item-user'><i className="flaticon-user43"></i> {msg.name}</div>
+            <div className='msg_list-item-time'>{created_at}</div>
+          </div>
           <div className='msg_list-item_content'>{msg.content}</div>
         </li>
       );
