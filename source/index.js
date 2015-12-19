@@ -42,8 +42,7 @@ class App extends React.Component {
   }
 
   notify(title, message) {
-    Notification.requestPermission();
-    var n = new Notification(title, { body: message });
+    ipcRenderer.send('notify', title, message);
   }
 
   dateString() {
